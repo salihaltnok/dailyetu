@@ -1,0 +1,121 @@
+.like-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    outline: none;
+  }
+  
+  .like-button i {
+    font-size: 24px;
+    color: #262626;
+    transition: all 0.3s ease;
+  }
+  
+  .like-button.liked i {
+    color: #ed4956;
+    animation: likeAnimation 0.3s ease-in-out;
+  }
+  
+  .like-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .like-button:active {
+    transform: scale(0.9);
+  }
+  
+  .like-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  @keyframes likeAnimation {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .like-button i::before {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .like-button.liked i::before {
+    transform: scale(1.1);
+  }
+  
+  .like-button:not(.liked):hover i {
+    color: #8e8e8e;
+  }
+  
+  @media (max-width: 768px) {
+    .like-button {
+      padding: 10px;
+    }
+  
+    .like-button i {
+      font-size: 22px;
+    }
+  }
+  
+  .like-count {
+    font-size: 14px;
+    color: #262626;
+    margin-left: 4px;
+  }
+  
+  .like-button.double-tap {
+    position: relative;
+  }
+  
+  .like-button.double-tap::after {
+    content: '♥';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #ed4956;
+    font-size: 80px;
+    opacity: 0;
+    pointer-events: none;
+    animation: doubleTapHeart 0.8s ease-out;
+  }
+  
+  @keyframes doubleTapHeart {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    15% {
+      opacity: 0.9;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    30% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    45% {
+      opacity: 0.7;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    80% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }

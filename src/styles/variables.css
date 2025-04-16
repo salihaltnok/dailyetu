@@ -1,0 +1,147 @@
+:root {
+    /* Ana Renkler */
+    --primary-color: #0095f6;
+    --primary-color-hover: #0086e0;
+    --primary-color-light: #b2dffc;
+    --secondary-color: #262626;
+    
+    /* Nötr Renkler */
+    --background-color: #fafafa;
+    --surface-color: #ffffff;
+    --border-color: #dbdbdb;
+    --border-color-hover: #a8a8a8;
+    
+    /* Metin Renkleri */
+    --text-primary: #262626;
+    --text-secondary: #8e8e8e;
+    --text-tertiary: #c7c7c7;
+    --text-light: #ffffff;
+    
+    /* Durum Renkleri */
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --error-color: #e74c3c;
+    --info-color: #3498db;
+    
+    /* Gölgeler */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.15);
+    
+    /* Boşluklar */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    
+    /* Kenar Yuvarlaklığı */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 9999px;
+    
+    /* Font Boyutları */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-xxl: 24px;
+    
+    /* Font Ağırlıkları */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Çizgi Yükseklikleri */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Z-index Değerleri */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal: 1040;
+    --z-index-popover: 1050;
+    --z-index-tooltip: 1060;
+    
+    /* Geçiş Süreleri */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    
+    /* Container Genişlikleri */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    
+    /* Header/Navbar Yüksekliği */
+    --header-height: 60px;
+    
+    /* Input/Button Yükseklikleri */
+    --input-height-sm: 32px;
+    --input-height-md: 40px;
+    --input-height-lg: 48px;
+    
+    /* Opacity Değerleri */
+    --opacity-light: 0.7;
+    --opacity-medium: 0.5;
+    --opacity-dark: 0.3;
+    
+    /* Grid Gap Değerleri */
+    --grid-gap-sm: 8px;
+    --grid-gap-md: 16px;
+    --grid-gap-lg: 24px;
+    
+    /* Avatar Boyutları */
+    --avatar-size-sm: 24px;
+    --avatar-size-md: 32px;
+    --avatar-size-lg: 48px;
+    --avatar-size-xl: 64px;
+    
+    /* Animasyon Eğrileri */
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    
+    /* Medya Sorguları için Breakpoint'ler */
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+  }
+  
+  /* Karanlık Tema için Değişkenler */
+  [data-theme="dark"] {
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --border-color: #2d2d2d;
+    --border-color-hover: #404040;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #808080;
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Medya Sorguları için Yardımcı Sınıflar */
+  @media (max-width: 576px) {
+    :root {
+      --spacing-lg: 20px;
+      --spacing-xl: 28px;
+      --font-size-lg: 16px;
+      --font-size-xl: 18px;
+      --font-size-xxl: 20px;
+    }
+  }

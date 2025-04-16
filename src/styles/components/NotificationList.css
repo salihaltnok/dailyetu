@@ -1,0 +1,35 @@
+.notifications-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+  }
+  
+  .notifications-container h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .notifications-loading,
+  .notifications-error,
+  .no-notifications {
+    text-align: center;
+    padding: 40px;
+    color: #8e8e8e;
+  }
+  
+  .notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background-color: #fafafa;
+  }
+  
+  .notifications-error {
+    color: #ed4956;
+  }

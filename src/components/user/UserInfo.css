@@ -1,0 +1,45 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .user-info-details {
+    flex: 1;
+  }
+  
+  .user-info-username {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .user-info-fullname {
+    color: #8e8e8e;
+    margin-bottom: 10px;
+  }
+  
+  .user-info-bio {
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .user-stats {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    color: #8e8e8e;
+    font-size: 14px;
+  }

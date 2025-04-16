@@ -1,0 +1,143 @@
+.post-list {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .load-more {
+    text-align: center;
+    padding: 20px;
+    color: #8e8e8e;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #8e8e8e;
+  }
+  
+  .empty-state i {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #dbdbdb;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post-list > * {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    .post-list {
+      margin: 10px auto;
+      gap: 15px;
+    }
+    
+    .error-message {
+      margin: 10px 15px;
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .post-list {
+      padding: 0 10px;
+      gap: 12px;
+    }
+  }
+  
+  .skeleton {
+    background: #f0f0f0;
+    background: linear-gradient(
+      90deg,
+      #f0f0f0 25%,
+      #e0e0e0 50%,
+      #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  .new-posts-notification {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0095f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+  
+  .new-posts-notification:hover {
+    background-color: #0086e0;
+  }
+  
+  .pull-to-refresh {
+    text-align: center;
+    padding: 20px;
+    color: #8e8e8e;
+    font-size: 14px;
+  }
+  
+  .pull-to-refresh i {
+    margin-right: 8px;
+    animation: rotate 1s linear infinite;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .post-list.masonry {
+      column-count: 2;
+      column-gap: 20px;
+    }
+  
+    .post-list.masonry > * {
+      break-inside: avoid;
+      margin-bottom: 20px;
+    }
+  }

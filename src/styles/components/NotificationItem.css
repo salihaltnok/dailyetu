@@ -1,0 +1,73 @@
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: white;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
+  }
+  
+  .notification-item:hover {
+    background-color: #fafafa;
+  }
+  
+  .notification-avatar {
+    margin-right: 12px;
+  }
+  
+  .notification-avatar img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .notification-content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .notification-text {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  
+  .username {
+    font-weight: 600;
+    color: #262626;
+  }
+  
+  .message {
+    color: #262626;
+  }
+  
+  .notification-time {
+    display: block;
+    font-size: 12px;
+    color: #8e8e8e;
+    margin-top: 4px;
+  }
+  
+  .notification-icon {
+    margin-left: 12px;
+    color: #8e8e8e;
+  }
+  
+  .notification-icon i {
+    font-size: 16px;
+  }
+  
+  /* Bildirim türlerine göre özel renkler */
+  .notification-icon .fa-heart {
+    color: #ed4956;
+  }
+  
+  .notification-icon .fa-comment {
+    color: #0095f6;
+  }
+  
+  .notification-icon .fa-user-plus {
+    color: #00c04b;
+  }

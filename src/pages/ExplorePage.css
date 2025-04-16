@@ -1,0 +1,132 @@
+.explore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .explore-container h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .error-message {
+    text-align: center;
+    color: #ff4444;
+    padding: 20px;
+    background-color: #ffe5e5;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .post-grid-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .post-grid-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .post-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 1200px) {
+    .explore-container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .explore-container {
+      padding: 10px;
+    }
+  
+    .explore-container h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+  
+    .post-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .explore-container h1 {
+      font-size: 20px;
+    }
+  
+    .post-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+    }
+  }
+  
+  .post-grid-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .post-grid-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .post-grid-item .stats {
+    color: white;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .post-grid-item .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+  }
+  
+  .empty-state p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
